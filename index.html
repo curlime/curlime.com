@@ -335,6 +335,54 @@
       flex-shrink: 0;
     }
 
+    /* Use Cases Section */
+    .use-cases {
+      padding: 5rem 0;
+      background: var(--bg-primary);
+    }
+
+    .use-cases h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .use-case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .use-case {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .use-case i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .use-case h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .use-case p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    
     /* CTA Section */
     .cta-section {
       padding: 5rem 0;
@@ -459,8 +507,8 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <h1>Stop Fighting With Regex</h1>
-          <p class="subtitle">Transform text using natural language instead of cryptic patterns. Just describe what you want, and AI generates the perfect code.</p>
+          <h1>Simplify Text Cleanup Instantly</h1>
+          <p class="subtitle">Open-source tool to strip formatting, remove line breaks, adjust case, and more. Use natural language to transform text instantly.</p>
           <div class="hero-buttons">
             <a href="#download" class="btn btn-primary">
               <i class="fas fa-download"></i> Download Now
@@ -521,20 +569,44 @@ return JSON.stringify(emails);</textarea>
         <div class="problem animate-on-scroll">
           <h2>The Problem</h2>
           <ul class="pain-points">
-            <li><i class="fas fa-times-circle"></i> Spending hours crafting regex patterns for simple tasks</li>
-            <li><i class="fas fa-times-circle"></i> Patterns work on 90% of text, break on edge cases</li>
-            <li><i class="fas fa-times-circle"></i> Manual copy-paste-edit for each transformation</li>
-            <li><i class="fas fa-times-circle"></i> Complex find-replace that's impossible to remember</li>
+            <li><i class="fas fa-times-circle"></i> Formatting issues like extra spaces and line breaks</li>
+            <li><i class="fas fa-times-circle"></i> Expensive tools that students can’t afford</li>
+            <li><i class="fas fa-times-circle"></i> Manual text cleanup takes too long</li>
+            <li><i class="fas fa-times-circle"></i> No easy way to automate transformations</li>
           </ul>
         </div>
         <div class="solution animate-on-scroll">
           <h2>The Solution</h2>
           <ul class="benefits">
-            <li><i class="fas fa-check-circle"></i> Describe transformations in plain English</li>
-            <li><i class="fas fa-check-circle"></i> AI generates perfect code that actually works</li>
-            <li><i class="fas fa-check-circle"></i> Real-time preview with one-click copying</li>
-            <li><i class="fas fa-check-circle"></i> Local processing keeps your data private</li>
+            <li><i class="fas fa-check-circle"></i> Free and open-source for all users</li>
+            <li><i class="fas fa-check-circle"></i> Strip formatting, adjust case, and more in seconds</li>
+            <li><i class="fas fa-check-circle"></i> Automate with Shortcuts or TRex integration</li>
+            <li><i class="fas fa-check-circle"></i> Local processing for maximum privacy</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="use-cases">
+    <div class="container">
+      <h2 class="animate-on-scroll">Who Uses Curlime?</h2>
+      <div class="use-case-grid animate-on-scroll">
+        <div class="use-case">
+          <i class="fas fa-user-graduate"></i>
+          <h3>Students</h3>
+          <p>Clean up copied text from PDFs or websites for notes and assignments without breaking the bank.</p>
+        </div>
+        <div class="use-case">
+          <i class="fas fa-code"></i>
+          <h3>Developers</h3>
+          <p>Transform code snippets, logs, or data formats with simple natural language prompts.</p>
+        </div>
+        <div class="use-case">
+          <i class="fas fa-pen-nib"></i>
+          <h3>Writers</h3>
+          <p>Remove unwanted formatting from drafts or web content for clean, polished documents.</p>
         </div>
       </div>
     </div>
