@@ -244,7 +244,7 @@
       grid-column: 1 / -1;
       display: flex;
       gap: 1rem;
-      justify-content: flex-end;
+      justify-content: flex-start;
       margin-top: 1rem;
       padding-top: 1rem;
       border-top: 1px solid var(--border);
@@ -534,22 +534,31 @@
             <div class="app-body">
               <div class="app-panel">
                 <label>Input Text</label>
-                <textarea class="app-input" readonly>john.doe@example.com - Manager
-jane.smith@company.org - Developer  
-bob.wilson@startup.io - Designer</textarea>
+                <textarea class="app-input" readonly>HELLO WORLD
+this    is   a   TEST
+with extra   spaces
+and LINE BREAKS</textarea>
               </div>
               <div class="app-panel">
                 <label>Transformation Prompt</label>
-                <textarea class="app-input" readonly>extract all email addresses and format as JSON array</textarea>
-              </div>
-              <div class="app-panel">
-                <label>Result</label>
-                <textarea class="app-input" readonly>["john.doe@example.com", "jane.smith@company.org", "bob.wilson@startup.io"]</textarea>
+                <textarea class="app-input" readonly>remove line breaks, extra spaces, and convert to title case</textarea>
               </div>
               <div class="app-panel">
                 <label>Generated Code</label>
-                <textarea class="app-input code" readonly>const emails = input.match(/\S+@\S+\.\S+/g);
-return JSON.stringify(emails);</textarea>
+                <textarea class="app-input code" readonly>function transform(text) {
+  // Remove line breaks and extra spaces, then convert to title case
+  return text
+    .replace(/[\r\n]+/g, ' ') // Replace line breaks with spaces
+    .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+    .trim() // Remove leading/trailing whitespace
+    .replace(/\w\S*/g, (txt) => {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}</textarea>
+              </div>
+              <div class="app-panel">
+                <label>Result</label>
+                <textarea class="app-input" readonly>Hello World This Is A Test With Extra Spaces And Line Breaks</textarea>
               </div>
               <div class="app-buttons">
                 <button class="app-button"><i class="fas fa-magic"></i> Generate</button>
